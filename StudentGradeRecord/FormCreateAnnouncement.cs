@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,20 +21,20 @@ namespace StudentGradeRecord
         SqlConnect cnt = new SqlConnect();
         void List()
         {
-            SqlCommand comd = new SqlCommand("Select * From TblAnnouncement", cnt.connect());
+            SqlCommand comd = new SqlCommand("Select * From TblAnnouncements", cnt.connect());
             SqlDataAdapter da = new SqlDataAdapter(comd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-        private void FrmCreateAnnouncement_Load(object sender, EventArgs e)
+        private void FormCreateAnnouncement_Load(object sender, EventArgs e)
         {
             List();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            SqlCommand comd = new SqlCommand("insert into TblAnnouncement (content) values (@p1)", cnt.connect());
+            SqlCommand comd = new SqlCommand("insert into TblAnnouncements (Description) values (@p1)", cnt.connect());
             comd.Parameters.AddWithValue("@p1", RchAnnouncement.Text);
             comd.ExecuteNonQuery();
             MessageBox.Show("Duyuru Oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +53,7 @@ namespace StudentGradeRecord
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            SqlCommand comd = new SqlCommand("Delete From TblAnnouncement where ID=@p1", cnt.connect());
+            SqlCommand comd = new SqlCommand("Delete From TblAnnouncements where AnnouncementID=@p1", cnt.connect());
             comd.Parameters.AddWithValue("@p1", id);
             comd.ExecuteNonQuery();
             MessageBox.Show("Duyuru Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -62,7 +63,7 @@ namespace StudentGradeRecord
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            SqlCommand comd = new SqlCommand("Update TblAnnouncement set content=@p1 where ID=@p2", cnt.connect());
+            SqlCommand comd = new SqlCommand("Update TblAnnouncements set Description=@p1 where AnnouncementID=@p2", cnt.connect());
             comd.Parameters.AddWithValue("@p1", RchAnnouncement.Text);
             comd.Parameters.AddWithValue("@p2", id);
             comd.ExecuteNonQuery();

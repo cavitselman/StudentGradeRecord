@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace StudentGradeRecord
         }
         SqlConnect cnt = new SqlConnect();
 
-        private void FrmAnnouncementList_Load(object sender, EventArgs e)
+        private void FormAnnouncementList_Load(object sender, EventArgs e)
         {
             ListBox lst = new ListBox();
             Point lstlocation = new Point(10, 10);
@@ -31,7 +32,7 @@ namespace StudentGradeRecord
             this.Controls.Add(lst);
 
             //Announcements Listing Codes
-            SqlCommand comd = new SqlCommand("Select * From TblAnnouncement", cnt.connect());
+            SqlCommand comd = new SqlCommand("Select * From TblAnnouncements", cnt.connect());
             SqlDataReader dr = comd.ExecuteReader();
             while (dr.Read())
             {

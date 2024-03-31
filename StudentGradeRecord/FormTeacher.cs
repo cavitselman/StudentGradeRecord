@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace StudentGradeRecord
         //Metot olarak öğrenci listesi kodlarımızı yazıyoruz.
         void OgrenciListesi()
         {
-            SqlCommand komut = new SqlCommand("Select * From TblOgrenci", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblStudents", cnt.connect());
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -46,7 +47,7 @@ namespace StudentGradeRecord
             LblNumara.Text = numara;
 
             //Numaryaa göre isim bilgisi getirme
-            SqlCommand komut = new SqlCommand("Select * From TblOgretmen where Numara=@p1", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblTeachers where Number=@p1", cnt.connect());
             komut.Parameters.AddWithValue("@p1", numara);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -71,7 +72,7 @@ namespace StudentGradeRecord
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into tblogrenci (ad,soyad,numara,sıfre,fotograf) values (@p1,@p2,@p3,@p4,@p5)", cnt.connect());
+            SqlCommand komut = new SqlCommand("insert into TblStudents (Name,Surname,Number,Password,Picture) values (@p1,@p2,@p3,@p4,@p5)", cnt.connect());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3", MskNumara.Text);
@@ -93,7 +94,7 @@ namespace StudentGradeRecord
             TxtSifre.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             pictureBox1.ImageLocation = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
 
-            SqlCommand komut = new SqlCommand("Select * From TblNotlar where Ogrıd=(Select ID From TblOgrenci Where Numara=@p1)", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblNotes where StudentID=(Select ID From TblStudents Where Number=@p1)", cnt.connect());
             komut.Parameters.AddWithValue("@p1", MskNumara.Text);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -111,7 +112,7 @@ namespace StudentGradeRecord
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
             //Öğrenci Bilgilerini Güncelleme
-            SqlCommand komut = new SqlCommand("update tblogrenci set ad=@p1,soyad=@p2,sıfre=@p3,fotograf=@p4 where numara=@p5", cnt.connect());
+            SqlCommand komut = new SqlCommand("update TblStudents set Name=@p1,Surname=@p2,Password=@p3,Picture=@p4 where Number=@p5", cnt.connect());
             komut.Parameters.AddWithValue("@p1", TxtAd.Text);
             komut.Parameters.AddWithValue("@p2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3", TxtSifre.Text);
@@ -121,7 +122,7 @@ namespace StudentGradeRecord
             cnt.connect().Close();
 
             //Not Bilgilerini Güncelleme
-            SqlCommand komut2 = new SqlCommand("update TblNotlar set Sınav1=@p1,Sınav2=@p2,Sınav3=@p3,Proje=@p4,Ortalama=@p5,Durum=@p6 where OGRID=(Select ID From TblOgrenci Where Numara=@p7)", cnt.connect());
+            SqlCommand komut2 = new SqlCommand("update TblNotes set Exam1=@p1,Exam2=@p2,Exam3=@p3,Project=@p4,Average=@p5,Status=@p6 where StudentID=(Select ID From TblStudents Where Number=@p7)", cnt.connect());
             komut2.Parameters.AddWithValue("@p1", TxtSınav1.Text);
             komut2.Parameters.AddWithValue("@p2", TxtSınav2.Text);
             komut2.Parameters.AddWithValue("@p3", TxtSınav3.Text);
@@ -139,14 +140,14 @@ namespace StudentGradeRecord
 
         private void BtnHesapla_Click(object sender, EventArgs e)
         {
-            double sınav1, sınav2, sınav3, proje, ortalama;
-            sınav1 = Convert.ToDouble(TxtSınav1.Text);
-            sınav2 = Convert.ToDouble(TxtSınav2.Text);
-            sınav3 = Convert.ToDouble(TxtSınav3.Text);
-            proje = Convert.ToDouble(TxtProje.Text);
-            ortalama = (sınav1 + sınav2 + sınav3 + proje) / 4;
-            TxtOrtalama.Text = ortalama.ToString();
-            if (ortalama >= 50)
+            double Exam1, Exam2, Exam3, Project, Average;
+            Exam1 = Convert.ToDouble(TxtSınav1.Text);
+            Exam2 = Convert.ToDouble(TxtSınav2.Text);
+            Exam3 = Convert.ToDouble(TxtSınav3.Text);
+            Project = Convert.ToDouble(TxtProje.Text);
+            Average = (Exam1 + Exam2 + Exam3 + Project) / 4;
+            TxtOrtalama.Text = Average.ToString();
+            if (Average >= 50)
             {
                 TxtDurum.Text = "True";
             }

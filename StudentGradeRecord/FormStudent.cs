@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,7 @@ namespace StudentGradeRecord
             LblNumara.Text = numara;
 
             //Numaryaa göre isim bilgisi getirme
-            SqlCommand komut = new SqlCommand("Select * From TblOgrenci where Numara=@p1", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblStudents where Number=@p1", cnt.connect());
             komut.Parameters.AddWithValue("@p1", numara);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -36,7 +37,7 @@ namespace StudentGradeRecord
             cnt.connect().Close();
 
             //Not Listesi
-            SqlCommand komut2 = new SqlCommand("Select * From TblNotlar where Ogrıd=(Select ID From TblOgrenci Where Numara=@p1)", cnt.connect());
+            SqlCommand komut2 = new SqlCommand("Select * From TblNotes where StudentID=(Select ID From TblStudents Where Number=@p1)", cnt.connect());
             komut2.Parameters.AddWithValue("@p1", LblNumara.Text);
             SqlDataReader dr2 = komut2.ExecuteReader();
             while (dr2.Read())

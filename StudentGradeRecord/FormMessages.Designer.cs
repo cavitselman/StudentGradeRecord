@@ -28,193 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnGonder = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RchMesaj = new System.Windows.Forms.RichTextBox();
-            this.TxtKonu = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.MskAlıcı = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.MskGonderen = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.SuspendLayout();
+            tabControl1 = new System.Windows.Forms.TabControl();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            dataGridView2 = new System.Windows.Forms.DataGridView();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            BtnGonder = new System.Windows.Forms.Button();
+            label4 = new System.Windows.Forms.Label();
+            RchMesaj = new System.Windows.Forms.RichTextBox();
+            TxtKonu = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            MskAlıcı = new System.Windows.Forms.MaskedTextBox();
+            label2 = new System.Windows.Forms.Label();
+            MskGonderen = new System.Windows.Forms.MaskedTextBox();
+            label1 = new System.Windows.Forms.Label();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(4, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(713, 240);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(705, 214);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "OutBox";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(699, 208);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.BtnGonder);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.RchMesaj);
-            this.groupBox1.Controls.Add(this.TxtKonu);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.MskAlıcı);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.MskGonderen);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 248);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(713, 113);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            // 
-            // BtnGonder
-            // 
-            this.BtnGonder.Location = new System.Drawing.Point(602, 28);
-            this.BtnGonder.Name = "BtnGonder";
-            this.BtnGonder.Size = new System.Drawing.Size(91, 63);
-            this.BtnGonder.TabIndex = 8;
-            this.BtnGonder.Text = "Send";
-            this.BtnGonder.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(260, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Message:";
-            // 
-            // RchMesaj
-            // 
-            this.RchMesaj.Location = new System.Drawing.Point(316, 17);
-            this.RchMesaj.Name = "RchMesaj";
-            this.RchMesaj.Size = new System.Drawing.Size(280, 81);
-            this.RchMesaj.TabIndex = 6;
-            this.RchMesaj.Text = "";
-            // 
-            // TxtKonu
-            // 
-            this.TxtKonu.Location = new System.Drawing.Point(81, 80);
-            this.TxtKonu.Name = "TxtKonu";
-            this.TxtKonu.Size = new System.Drawing.Size(134, 20);
-            this.TxtKonu.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Subject:";
-            // 
-            // MskAlıcı
-            // 
-            this.MskAlıcı.Location = new System.Drawing.Point(81, 47);
-            this.MskAlıcı.Mask = "0000";
-            this.MskAlıcı.Name = "MskAlıcı";
-            this.MskAlıcı.Size = new System.Drawing.Size(134, 20);
-            this.MskAlıcı.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Receiver:";
-            // 
-            // MskGonderen
-            // 
-            this.MskGonderen.Location = new System.Drawing.Point(81, 17);
-            this.MskGonderen.Mask = "0000";
-            this.MskGonderen.Name = "MskGonderen";
-            this.MskGonderen.Size = new System.Drawing.Size(134, 20);
-            this.MskGonderen.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sender:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(699, 208);
-            this.dataGridView1.TabIndex = 0;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new System.Drawing.Point(5, 2);
+            tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(832, 277);
+            tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(705, 214);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Inbox";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(dataGridView1);
+            tabPage1.Location = new System.Drawing.Point(4, 24);
+            tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage1.Size = new System.Drawing.Size(824, 249);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Inbox";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
-            // FrmMessages
+            // dataGridView1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(720, 365);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "FrmMessages";
-            this.Text = "FrmMessages";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridView1.Location = new System.Drawing.Point(4, 3);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new System.Drawing.Size(816, 243);
+            dataGridView1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(dataGridView2);
+            tabPage2.Location = new System.Drawing.Point(4, 24);
+            tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            tabPage2.Size = new System.Drawing.Size(824, 249);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Outbox";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridView2.Location = new System.Drawing.Point(4, 3);
+            dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new System.Drawing.Size(816, 243);
+            dataGridView2.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(BtnGonder);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(RchMesaj);
+            groupBox1.Controls.Add(TxtKonu);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(MskAlıcı);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(MskGonderen);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new System.Drawing.Point(4, 286);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Size = new System.Drawing.Size(832, 130);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            // 
+            // BtnGonder
+            // 
+            BtnGonder.Location = new System.Drawing.Point(702, 32);
+            BtnGonder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnGonder.Name = "BtnGonder";
+            BtnGonder.Size = new System.Drawing.Size(106, 73);
+            BtnGonder.TabIndex = 8;
+            BtnGonder.Text = "Send";
+            BtnGonder.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(312, 27);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(56, 15);
+            label4.TabIndex = 7;
+            label4.Text = "Message:";
+            // 
+            // RchMesaj
+            // 
+            RchMesaj.Location = new System.Drawing.Point(369, 20);
+            RchMesaj.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            RchMesaj.Name = "RchMesaj";
+            RchMesaj.Size = new System.Drawing.Size(326, 93);
+            RchMesaj.TabIndex = 6;
+            RchMesaj.Text = "";
+            // 
+            // TxtKonu
+            // 
+            TxtKonu.Location = new System.Drawing.Point(94, 92);
+            TxtKonu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtKonu.Name = "TxtKonu";
+            TxtKonu.Size = new System.Drawing.Size(156, 23);
+            TxtKonu.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(43, 96);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(49, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Subject:";
+            // 
+            // MskAlıcı
+            // 
+            MskAlıcı.Location = new System.Drawing.Point(94, 54);
+            MskAlıcı.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskAlıcı.Mask = "0000";
+            MskAlıcı.Name = "MskAlıcı";
+            MskAlıcı.Size = new System.Drawing.Size(156, 23);
+            MskAlıcı.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(38, 58);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(54, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Receiver:";
+            // 
+            // MskGonderen
+            // 
+            MskGonderen.Location = new System.Drawing.Point(94, 20);
+            MskGonderen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskGonderen.Mask = "0000";
+            MskGonderen.Name = "MskGonderen";
+            MskGonderen.Size = new System.Drawing.Size(156, 23);
+            MskGonderen.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(46, 23);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(46, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Sender:";
+            // 
+            // FormMessages
+            // 
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(192, 192, 255);
+            ClientSize = new System.Drawing.Size(840, 421);
+            Controls.Add(tabControl1);
+            Controls.Add(groupBox1);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "FormMessages";
+            Text = "Messages";
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

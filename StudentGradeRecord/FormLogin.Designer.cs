@@ -29,180 +29,198 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BtnOgretmenGiris = new System.Windows.Forms.Button();
-            this.TxtOgretmenSifre = new System.Windows.Forms.TextBox();
-            this.MskOgretmenNumara = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BtnOgrenciGiris = new System.Windows.Forms.Button();
-            this.TxtOGrenciSifre = new System.Windows.Forms.TextBox();
-            this.MskOgrenciNumara = new System.Windows.Forms.MaskedTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            BtnOgretmenGiris = new System.Windows.Forms.Button();
+            TxtOgretmenSifre = new System.Windows.Forms.TextBox();
+            MskOgretmenNumara = new System.Windows.Forms.MaskedTextBox();
+            label2 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            BtnOgrenciGiris = new System.Windows.Forms.Button();
+            TxtOGrenciSifre = new System.Windows.Forms.TextBox();
+            MskOgrenciNumara = new System.Windows.Forms.MaskedTextBox();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.BtnOgretmenGiris);
-            this.groupBox1.Controls.Add(this.TxtOgretmenSifre);
-            this.groupBox1.Controls.Add(this.MskOgretmenNumara);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 149);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Teacher";
+            groupBox1.Controls.Add(BtnOgretmenGiris);
+            groupBox1.Controls.Add(TxtOgretmenSifre);
+            groupBox1.Controls.Add(MskOgretmenNumara);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Location = new System.Drawing.Point(14, 14);
+            groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox1.Size = new System.Drawing.Size(429, 172);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Teacher";
             // 
             // BtnOgretmenGiris
             // 
-            this.BtnOgretmenGiris.Location = new System.Drawing.Point(226, 93);
-            this.BtnOgretmenGiris.Name = "BtnOgretmenGiris";
-            this.BtnOgretmenGiris.Size = new System.Drawing.Size(119, 32);
-            this.BtnOgretmenGiris.TabIndex = 5;
-            this.BtnOgretmenGiris.Text = "Login";
-            this.BtnOgretmenGiris.UseVisualStyleBackColor = true;
+            BtnOgretmenGiris.Location = new System.Drawing.Point(264, 107);
+            BtnOgretmenGiris.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnOgretmenGiris.Name = "BtnOgretmenGiris";
+            BtnOgretmenGiris.Size = new System.Drawing.Size(139, 37);
+            BtnOgretmenGiris.TabIndex = 5;
+            BtnOgretmenGiris.Text = "Login";
+            BtnOgretmenGiris.UseVisualStyleBackColor = true;
+            BtnOgretmenGiris.Click += BtnOgretmenGiris_Click;
             // 
             // TxtOgretmenSifre
             // 
-            this.TxtOgretmenSifre.Location = new System.Drawing.Point(226, 63);
-            this.TxtOgretmenSifre.Name = "TxtOgretmenSifre";
-            this.TxtOgretmenSifre.Size = new System.Drawing.Size(119, 20);
-            this.TxtOgretmenSifre.TabIndex = 4;
-            this.TxtOgretmenSifre.UseSystemPasswordChar = true;
+            TxtOgretmenSifre.Location = new System.Drawing.Point(264, 73);
+            TxtOgretmenSifre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtOgretmenSifre.Name = "TxtOgretmenSifre";
+            TxtOgretmenSifre.Size = new System.Drawing.Size(138, 23);
+            TxtOgretmenSifre.TabIndex = 4;
+            TxtOgretmenSifre.UseSystemPasswordChar = true;
             // 
             // MskOgretmenNumara
             // 
-            this.MskOgretmenNumara.Location = new System.Drawing.Point(226, 29);
-            this.MskOgretmenNumara.Mask = "0000";
-            this.MskOgretmenNumara.Name = "MskOgretmenNumara";
-            this.MskOgretmenNumara.Size = new System.Drawing.Size(119, 20);
-            this.MskOgretmenNumara.TabIndex = 3;
+            MskOgretmenNumara.Location = new System.Drawing.Point(264, 33);
+            MskOgretmenNumara.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskOgretmenNumara.Mask = "0000";
+            MskOgretmenNumara.Name = "MskOgretmenNumara";
+            MskOgretmenNumara.Size = new System.Drawing.Size(138, 23);
+            MskOgretmenNumara.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(196, 76);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(60, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Password:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Number:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(205, 37);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(54, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Number:";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(7, 33);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(167, 99);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.BtnOgrenciGiris);
-            this.groupBox2.Controls.Add(this.TxtOGrenciSifre);
-            this.groupBox2.Controls.Add(this.MskOgrenciNumara);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 167);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 149);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Student";
+            groupBox2.Controls.Add(BtnOgrenciGiris);
+            groupBox2.Controls.Add(TxtOGrenciSifre);
+            groupBox2.Controls.Add(MskOgrenciNumara);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(label4);
+            groupBox2.Controls.Add(pictureBox2);
+            groupBox2.Location = new System.Drawing.Point(14, 193);
+            groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            groupBox2.Size = new System.Drawing.Size(429, 172);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Student";
             // 
             // BtnOgrenciGiris
             // 
-            this.BtnOgrenciGiris.Location = new System.Drawing.Point(226, 93);
-            this.BtnOgrenciGiris.Name = "BtnOgrenciGiris";
-            this.BtnOgrenciGiris.Size = new System.Drawing.Size(119, 32);
-            this.BtnOgrenciGiris.TabIndex = 5;
-            this.BtnOgrenciGiris.Text = "Login";
-            this.BtnOgrenciGiris.UseVisualStyleBackColor = true;
+            BtnOgrenciGiris.Location = new System.Drawing.Point(264, 107);
+            BtnOgrenciGiris.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnOgrenciGiris.Name = "BtnOgrenciGiris";
+            BtnOgrenciGiris.Size = new System.Drawing.Size(139, 37);
+            BtnOgrenciGiris.TabIndex = 5;
+            BtnOgrenciGiris.Text = "Login";
+            BtnOgrenciGiris.UseVisualStyleBackColor = true;
+            BtnOgrenciGiris.Click += BtnOgrenciGiris_Click;
             // 
             // TxtOGrenciSifre
             // 
-            this.TxtOGrenciSifre.Location = new System.Drawing.Point(226, 63);
-            this.TxtOGrenciSifre.Name = "TxtOGrenciSifre";
-            this.TxtOGrenciSifre.Size = new System.Drawing.Size(119, 20);
-            this.TxtOGrenciSifre.TabIndex = 4;
-            this.TxtOGrenciSifre.UseSystemPasswordChar = true;
+            TxtOGrenciSifre.Location = new System.Drawing.Point(264, 73);
+            TxtOGrenciSifre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtOGrenciSifre.Name = "TxtOGrenciSifre";
+            TxtOGrenciSifre.Size = new System.Drawing.Size(138, 23);
+            TxtOGrenciSifre.TabIndex = 4;
+            TxtOGrenciSifre.UseSystemPasswordChar = true;
             // 
             // MskOgrenciNumara
             // 
-            this.MskOgrenciNumara.Location = new System.Drawing.Point(226, 29);
-            this.MskOgrenciNumara.Mask = "0000";
-            this.MskOgrenciNumara.Name = "MskOgrenciNumara";
-            this.MskOgrenciNumara.Size = new System.Drawing.Size(119, 20);
-            this.MskOgrenciNumara.TabIndex = 3;
+            MskOgrenciNumara.Location = new System.Drawing.Point(264, 33);
+            MskOgrenciNumara.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskOgrenciNumara.Mask = "0000";
+            MskOgrenciNumara.Name = "MskOgrenciNumara";
+            MskOgrenciNumara.Size = new System.Drawing.Size(138, 23);
+            MskOgrenciNumara.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(167, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Password:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(195, 76);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(60, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Password:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(175, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Number:";
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(204, 37);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(54, 15);
+            label4.TabIndex = 1;
+            label4.Text = "Number:";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 29);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 86);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new System.Drawing.Point(7, 33);
+            pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(167, 99);
+            pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
-            // Form1
+            // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(395, 326);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Name = "Form1";
-            this.Text = "Student Grading System";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(192, 192, 255);
+            ClientSize = new System.Drawing.Size(461, 376);
+            Controls.Add(groupBox1);
+            Controls.Add(groupBox2);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "FormLogin";
+            Text = "Student Grading System";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

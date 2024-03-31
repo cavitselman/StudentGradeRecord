@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,7 @@ namespace StudentGradeRecord
 
         void GelenMesajlar()
         {
-            SqlCommand komut = new SqlCommand("Select * From TblMesajlar Where Alıcı=@p1", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblMessages Where Receiver=@p1", cnt.connect());
             komut.Parameters.AddWithValue("@p1", numara);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
@@ -32,7 +33,7 @@ namespace StudentGradeRecord
 
         void GidenMesajlar()
         {
-            SqlCommand komut = new SqlCommand("Select * From TblMesajlar Where Gonderen=@p1", cnt.connect());
+            SqlCommand komut = new SqlCommand("Select * From TblMessages Where Sender=@p1", cnt.connect());
             komut.Parameters.AddWithValue("@p1", numara);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
@@ -53,7 +54,7 @@ namespace StudentGradeRecord
 
         private void BtnGonder_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into TblMesajlar (Gonderen,Alıcı,Baslık,Icerık) values (@p1,@p2,@p3,@p4)", cnt.connect());
+            SqlCommand komut = new SqlCommand("insert into TblMessages (Sender,Receiver,Title,Message) values (@p1,@p2,@p3,@p4)", cnt.connect());
             komut.Parameters.AddWithValue("@p1", MskGonderen.Text);
             komut.Parameters.AddWithValue("@p2", MskAlıcı.Text);
             komut.Parameters.AddWithValue("@p3", TxtKonu.Text);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace StudentGradeRecord
     {
         public SqlConnection connect()
         {
-            SqlConnection connec = new SqlConnection(@"Data Source=\SQLEXPRESS;Initial Catalog=StudentGradeRecord;Integrated Security=True");
+            SqlConnection connec = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=StudentGradeRecord;Integrated Security=True;TrustServerCertificate=True;");
             connec.Open();
             return connec;
         }
