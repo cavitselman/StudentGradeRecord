@@ -28,86 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnEdit = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnAdd = new System.Windows.Forms.Button();
-            this.RchAnnouncement = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            BtnEdit = new System.Windows.Forms.Button();
+            BtnDelete = new System.Windows.Forms.Button();
+            BtnAdd = new System.Windows.Forms.Button();
+            RchAnnouncement = new System.Windows.Forms.RichTextBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::StudentGradeRecord.Properties.Resources.announcement;
-            this.pictureBox1.Location = new System.Drawing.Point(385, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 149);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = Properties.Resources.announcement;
+            pictureBox1.Location = new System.Drawing.Point(449, 7);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(204, 172);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 161);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(555, 150);
-            this.dataGridView1.TabIndex = 11;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new System.Drawing.Point(6, 186);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new System.Drawing.Size(648, 173);
+            dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(274, 123);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(90, 32);
-            this.BtnEdit.TabIndex = 10;
-            this.BtnEdit.Text = "Edit";
-            this.BtnEdit.UseVisualStyleBackColor = true;
+            BtnEdit.Location = new System.Drawing.Point(320, 142);
+            BtnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new System.Drawing.Size(105, 37);
+            BtnEdit.TabIndex = 10;
+            BtnEdit.Text = "Edit";
+            BtnEdit.UseVisualStyleBackColor = true;
+            BtnEdit.Click += BtnEdit_Click;
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(145, 123);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(90, 32);
-            this.BtnDelete.TabIndex = 9;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Location = new System.Drawing.Point(169, 142);
+            BtnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new System.Drawing.Size(105, 37);
+            BtnDelete.TabIndex = 9;
+            BtnDelete.Text = "Delete";
+            BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(5, 123);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(90, 32);
-            this.BtnAdd.TabIndex = 8;
-            this.BtnAdd.Text = "Add";
-            this.BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Location = new System.Drawing.Point(6, 142);
+            BtnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnAdd.Name = "BtnAdd";
+            BtnAdd.Size = new System.Drawing.Size(105, 37);
+            BtnAdd.TabIndex = 8;
+            BtnAdd.Text = "Add";
+            BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
             // 
             // RchAnnouncement
             // 
-            this.RchAnnouncement.Location = new System.Drawing.Point(5, 6);
-            this.RchAnnouncement.Name = "RchAnnouncement";
-            this.RchAnnouncement.Size = new System.Drawing.Size(359, 108);
-            this.RchAnnouncement.TabIndex = 7;
-            this.RchAnnouncement.Text = "";
+            RchAnnouncement.Location = new System.Drawing.Point(6, 7);
+            RchAnnouncement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            RchAnnouncement.Name = "RchAnnouncement";
+            RchAnnouncement.Size = new System.Drawing.Size(418, 124);
+            RchAnnouncement.TabIndex = 7;
+            RchAnnouncement.Text = "";
             // 
-            // FrmCreateAnnouncement
+            // FormCreateAnnouncement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 315);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.BtnEdit);
-            this.Controls.Add(this.BtnDelete);
-            this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.RchAnnouncement);
-            this.Name = "FrmCreateAnnouncement";
-            this.Text = "Create Announcement";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(658, 363);
+            Controls.Add(pictureBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(BtnEdit);
+            Controls.Add(BtnDelete);
+            Controls.Add(BtnAdd);
+            Controls.Add(RchAnnouncement);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "FormCreateAnnouncement";
+            Text = "Create Announcement";
+            Load += FormCreateAnnouncement_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

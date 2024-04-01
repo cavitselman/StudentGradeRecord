@@ -21,49 +21,47 @@ namespace StudentGradeRecord
 
         SqlConnect cnt = new SqlConnect();
 
-        void GelenMesajlar()
+        void IncomingMessages()
         {
-            SqlCommand komut = new SqlCommand("Select * From TblMessages Where Receiver=@p1", cnt.connect());
-            komut.Parameters.AddWithValue("@p1", numara);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
+            SqlCommand comd = new SqlCommand("Select * From TblMessages Where Receiver=@p1", cnt.connect());
+            comd.Parameters.AddWithValue("@p1", number);
+            SqlDataAdapter da = new SqlDataAdapter(comd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
 
-        void GidenMesajlar()
+        void OutgoingMessages()
         {
-            SqlCommand komut = new SqlCommand("Select * From TblMessages Where Sender=@p1", cnt.connect());
-            komut.Parameters.AddWithValue("@p1", numara);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
+            SqlCommand comd = new SqlCommand("Select * From TblMessages Where Sender=@p1", cnt.connect());
+            comd.Parameters.AddWithValue("@p1", number);
+            SqlDataAdapter da = new SqlDataAdapter(comd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
-        //Mesajlar Formu
-        public string numara;
-
-        private void FrmMesjalar_Load(object sender, EventArgs e)
+        //Messages Form
+        public string number;
+        private void FormMessages_Load(object sender, EventArgs e)
         {
-            MskGonderen.Text = numara;
+            MskSender.Text = number;
 
-            GelenMesajlar();
+            IncomingMessages();
 
-            GidenMesajlar();
+            OutgoingMessages();
         }
-
-        private void BtnGonder_Click(object sender, EventArgs e)
+        private void BtnSend_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into TblMessages (Sender,Receiver,Title,Message) values (@p1,@p2,@p3,@p4)", cnt.connect());
-            komut.Parameters.AddWithValue("@p1", MskGonderen.Text);
-            komut.Parameters.AddWithValue("@p2", MskAlıcı.Text);
-            komut.Parameters.AddWithValue("@p3", TxtKonu.Text);
-            komut.Parameters.AddWithValue("@p4", RchMesaj.Text);
-            komut.ExecuteNonQuery();
-            MessageBox.Show("Mesajınız İletildi...", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SqlCommand comd = new SqlCommand("insert into TblMessages (Sender,Receiver,Title,Message) values (@p1,@p2,@p3,@p4)", cnt.connect());
+            comd.Parameters.AddWithValue("@p1", MskSender.Text);
+            comd.Parameters.AddWithValue("@p2", MskReceiver.Text);
+            comd.Parameters.AddWithValue("@p3", TxtSubject.Text);
+            comd.Parameters.AddWithValue("@p4", RchMessage.Text);
+            comd.ExecuteNonQuery();
+            MessageBox.Show("Your Message Has Been Delivered...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cnt.connect().Close();
-            GelenMesajlar();
-            GidenMesajlar();
+            IncomingMessages();
+            OutgoingMessages();
         }
     }
 }

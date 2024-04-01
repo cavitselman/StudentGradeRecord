@@ -30,49 +30,49 @@
         {
             label15 = new System.Windows.Forms.Label();
             label13 = new System.Windows.Forms.Label();
-            TxtOrtalama = new System.Windows.Forms.TextBox();
-            BtnDuyuruListesi = new System.Windows.Forms.Button();
+            TxtAverage = new System.Windows.Forms.TextBox();
+            BtnAnnouncementList = new System.Windows.Forms.Button();
             groupBox4 = new System.Windows.Forms.GroupBox();
-            BtnListele = new System.Windows.Forms.Button();
-            BtnGuncelle = new System.Windows.Forms.Button();
-            BtnSil = new System.Windows.Forms.Button();
-            BtnKaydet = new System.Windows.Forms.Button();
-            TxtDurum = new System.Windows.Forms.TextBox();
+            BtnList = new System.Windows.Forms.Button();
+            BtnEdit = new System.Windows.Forms.Button();
+            BtnDelete = new System.Windows.Forms.Button();
+            BtnSave = new System.Windows.Forms.Button();
+            TxtStatus = new System.Windows.Forms.TextBox();
             dataGridView1 = new System.Windows.Forms.DataGridView();
             groupBox6 = new System.Windows.Forms.GroupBox();
             dataGridView2 = new System.Windows.Forms.DataGridView();
             openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             groupBox7 = new System.Windows.Forms.GroupBox();
-            BtnCikis = new System.Windows.Forms.Button();
-            BtnMesajlar = new System.Windows.Forms.Button();
-            BtnDuyuruOlustur = new System.Windows.Forms.Button();
+            BtnExit = new System.Windows.Forms.Button();
+            BtnMessages = new System.Windows.Forms.Button();
+            BtnCreateAnnouncement = new System.Windows.Forms.Button();
             groupBox5 = new System.Windows.Forms.GroupBox();
             label12 = new System.Windows.Forms.Label();
             groupBox1 = new System.Windows.Forms.GroupBox();
-            LblNumara = new System.Windows.Forms.Label();
+            LblNumber = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            LblAdSoyad = new System.Windows.Forms.Label();
+            LblNameSurname = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             groupBox2 = new System.Windows.Forms.GroupBox();
-            BtnFotografSec = new System.Windows.Forms.Button();
+            BtnPictureSelect = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             label9 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
-            TxtSifre = new System.Windows.Forms.TextBox();
+            TxtPassword = new System.Windows.Forms.TextBox();
             label7 = new System.Windows.Forms.Label();
-            TxtSoyad = new System.Windows.Forms.TextBox();
+            TxtSurname = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
-            TxtAd = new System.Windows.Forms.TextBox();
-            MskNumara = new System.Windows.Forms.MaskedTextBox();
+            TxtName = new System.Windows.Forms.TextBox();
+            MskNumber = new System.Windows.Forms.MaskedTextBox();
             label5 = new System.Windows.Forms.Label();
-            TxtProje = new System.Windows.Forms.TextBox();
+            TxtProject = new System.Windows.Forms.TextBox();
             label11 = new System.Windows.Forms.Label();
-            TxtSınav3 = new System.Windows.Forms.TextBox();
+            TxtExam3 = new System.Windows.Forms.TextBox();
             label10 = new System.Windows.Forms.Label();
-            TxtSınav2 = new System.Windows.Forms.TextBox();
+            TxtExam2 = new System.Windows.Forms.TextBox();
             label14 = new System.Windows.Forms.Label();
-            TxtSınav1 = new System.Windows.Forms.TextBox();
-            BtnHesapla = new System.Windows.Forms.Button();
+            TxtExam1 = new System.Windows.Forms.TextBox();
+            BtnCalculate = new System.Windows.Forms.Button();
             groupBox3 = new System.Windows.Forms.GroupBox();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -106,30 +106,31 @@
             label13.TabIndex = 22;
             label13.Text = "Average:";
             // 
-            // TxtOrtalama
+            // TxtAverage
             // 
-            TxtOrtalama.Location = new System.Drawing.Point(87, 159);
-            TxtOrtalama.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtOrtalama.Name = "TxtOrtalama";
-            TxtOrtalama.Size = new System.Drawing.Size(68, 23);
-            TxtOrtalama.TabIndex = 21;
+            TxtAverage.Location = new System.Drawing.Point(87, 159);
+            TxtAverage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtAverage.Name = "TxtAverage";
+            TxtAverage.Size = new System.Drawing.Size(68, 23);
+            TxtAverage.TabIndex = 21;
             // 
-            // BtnDuyuruListesi
+            // BtnAnnouncementList
             // 
-            BtnDuyuruListesi.Location = new System.Drawing.Point(178, 20);
-            BtnDuyuruListesi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnDuyuruListesi.Name = "BtnDuyuruListesi";
-            BtnDuyuruListesi.Size = new System.Drawing.Size(149, 32);
-            BtnDuyuruListesi.TabIndex = 7;
-            BtnDuyuruListesi.Text = "Announcement List";
-            BtnDuyuruListesi.UseVisualStyleBackColor = true;
+            BtnAnnouncementList.Location = new System.Drawing.Point(178, 20);
+            BtnAnnouncementList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnAnnouncementList.Name = "BtnAnnouncementList";
+            BtnAnnouncementList.Size = new System.Drawing.Size(149, 32);
+            BtnAnnouncementList.TabIndex = 7;
+            BtnAnnouncementList.Text = "Announcement List";
+            BtnAnnouncementList.UseVisualStyleBackColor = true;
+            BtnAnnouncementList.Click += BtnAnnouncementList_Click;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(BtnListele);
-            groupBox4.Controls.Add(BtnGuncelle);
-            groupBox4.Controls.Add(BtnSil);
-            groupBox4.Controls.Add(BtnKaydet);
+            groupBox4.Controls.Add(BtnList);
+            groupBox4.Controls.Add(BtnEdit);
+            groupBox4.Controls.Add(BtnDelete);
+            groupBox4.Controls.Add(BtnSave);
             groupBox4.Location = new System.Drawing.Point(288, 276);
             groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             groupBox4.Name = "groupBox4";
@@ -138,53 +139,55 @@
             groupBox4.TabIndex = 10;
             groupBox4.TabStop = false;
             // 
-            // BtnListele
+            // BtnList
             // 
-            BtnListele.Location = new System.Drawing.Point(19, 141);
-            BtnListele.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnListele.Name = "BtnListele";
-            BtnListele.Size = new System.Drawing.Size(149, 32);
-            BtnListele.TabIndex = 5;
-            BtnListele.Text = "List";
-            BtnListele.UseVisualStyleBackColor = true;
+            BtnList.Location = new System.Drawing.Point(19, 141);
+            BtnList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnList.Name = "BtnList";
+            BtnList.Size = new System.Drawing.Size(149, 32);
+            BtnList.TabIndex = 5;
+            BtnList.Text = "List";
+            BtnList.UseVisualStyleBackColor = true;
             // 
-            // BtnGuncelle
+            // BtnEdit
             // 
-            BtnGuncelle.Location = new System.Drawing.Point(19, 102);
-            BtnGuncelle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnGuncelle.Name = "BtnGuncelle";
-            BtnGuncelle.Size = new System.Drawing.Size(149, 32);
-            BtnGuncelle.TabIndex = 4;
-            BtnGuncelle.Text = "Edit";
-            BtnGuncelle.UseVisualStyleBackColor = true;
+            BtnEdit.Location = new System.Drawing.Point(19, 102);
+            BtnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new System.Drawing.Size(149, 32);
+            BtnEdit.TabIndex = 4;
+            BtnEdit.Text = "Edit";
+            BtnEdit.UseVisualStyleBackColor = true;
+            BtnEdit.Click += BtnEdit_Click;
             // 
-            // BtnSil
+            // BtnDelete
             // 
-            BtnSil.Location = new System.Drawing.Point(19, 62);
-            BtnSil.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnSil.Name = "BtnSil";
-            BtnSil.Size = new System.Drawing.Size(149, 32);
-            BtnSil.TabIndex = 3;
-            BtnSil.Text = "Delete";
-            BtnSil.UseVisualStyleBackColor = true;
+            BtnDelete.Location = new System.Drawing.Point(19, 62);
+            BtnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new System.Drawing.Size(149, 32);
+            BtnDelete.TabIndex = 3;
+            BtnDelete.Text = "Delete";
+            BtnDelete.UseVisualStyleBackColor = true;
             // 
-            // BtnKaydet
+            // BtnSave
             // 
-            BtnKaydet.Location = new System.Drawing.Point(19, 23);
-            BtnKaydet.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnKaydet.Name = "BtnKaydet";
-            BtnKaydet.Size = new System.Drawing.Size(149, 32);
-            BtnKaydet.TabIndex = 2;
-            BtnKaydet.Text = "Save";
-            BtnKaydet.UseVisualStyleBackColor = true;
+            BtnSave.Location = new System.Drawing.Point(19, 23);
+            BtnSave.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new System.Drawing.Size(149, 32);
+            BtnSave.TabIndex = 2;
+            BtnSave.Text = "Save";
+            BtnSave.UseVisualStyleBackColor = true;
+            BtnSave.Click += BtnSave_Click;
             // 
-            // TxtDurum
+            // TxtStatus
             // 
-            TxtDurum.Location = new System.Drawing.Point(87, 194);
-            TxtDurum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtDurum.Name = "TxtDurum";
-            TxtDurum.Size = new System.Drawing.Size(68, 23);
-            TxtDurum.TabIndex = 23;
+            TxtStatus.Location = new System.Drawing.Point(87, 194);
+            TxtStatus.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtStatus.Name = "TxtStatus";
+            TxtStatus.Size = new System.Drawing.Size(68, 23);
+            TxtStatus.TabIndex = 23;
             // 
             // dataGridView1
             // 
@@ -195,6 +198,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new System.Drawing.Size(652, 221);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // groupBox6
             // 
@@ -223,10 +227,10 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(BtnCikis);
-            groupBox7.Controls.Add(BtnMesajlar);
-            groupBox7.Controls.Add(BtnDuyuruListesi);
-            groupBox7.Controls.Add(BtnDuyuruOlustur);
+            groupBox7.Controls.Add(BtnExit);
+            groupBox7.Controls.Add(BtnMessages);
+            groupBox7.Controls.Add(BtnAnnouncementList);
+            groupBox7.Controls.Add(BtnCreateAnnouncement);
             groupBox7.Location = new System.Drawing.Point(487, 397);
             groupBox7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             groupBox7.Name = "groupBox7";
@@ -235,35 +239,38 @@
             groupBox7.TabIndex = 13;
             groupBox7.TabStop = false;
             // 
-            // BtnCikis
+            // BtnExit
             // 
-            BtnCikis.Location = new System.Drawing.Point(490, 20);
-            BtnCikis.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnCikis.Name = "BtnCikis";
-            BtnCikis.Size = new System.Drawing.Size(149, 32);
-            BtnCikis.TabIndex = 9;
-            BtnCikis.Text = "Exit";
-            BtnCikis.UseVisualStyleBackColor = true;
+            BtnExit.Location = new System.Drawing.Point(490, 20);
+            BtnExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(149, 32);
+            BtnExit.TabIndex = 9;
+            BtnExit.Text = "Exit";
+            BtnExit.UseVisualStyleBackColor = true;
+            BtnExit.Click += BtnExit_Click;
             // 
-            // BtnMesajlar
+            // BtnMessages
             // 
-            BtnMesajlar.Location = new System.Drawing.Point(334, 20);
-            BtnMesajlar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnMesajlar.Name = "BtnMesajlar";
-            BtnMesajlar.Size = new System.Drawing.Size(149, 32);
-            BtnMesajlar.TabIndex = 8;
-            BtnMesajlar.Text = "Messages";
-            BtnMesajlar.UseVisualStyleBackColor = true;
+            BtnMessages.Location = new System.Drawing.Point(334, 20);
+            BtnMessages.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnMessages.Name = "BtnMessages";
+            BtnMessages.Size = new System.Drawing.Size(149, 32);
+            BtnMessages.TabIndex = 8;
+            BtnMessages.Text = "Messages";
+            BtnMessages.UseVisualStyleBackColor = true;
+            BtnMessages.Click += BtnMessages_Click;
             // 
-            // BtnDuyuruOlustur
+            // BtnCreateAnnouncement
             // 
-            BtnDuyuruOlustur.Location = new System.Drawing.Point(21, 20);
-            BtnDuyuruOlustur.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnDuyuruOlustur.Name = "BtnDuyuruOlustur";
-            BtnDuyuruOlustur.Size = new System.Drawing.Size(149, 32);
-            BtnDuyuruOlustur.TabIndex = 6;
-            BtnDuyuruOlustur.Text = "Create Announcement";
-            BtnDuyuruOlustur.UseVisualStyleBackColor = true;
+            BtnCreateAnnouncement.Location = new System.Drawing.Point(21, 20);
+            BtnCreateAnnouncement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnCreateAnnouncement.Name = "BtnCreateAnnouncement";
+            BtnCreateAnnouncement.Size = new System.Drawing.Size(149, 32);
+            BtnCreateAnnouncement.TabIndex = 6;
+            BtnCreateAnnouncement.Text = "Create Announcement";
+            BtnCreateAnnouncement.UseVisualStyleBackColor = true;
+            BtnCreateAnnouncement.Click += BtnCreateAnnouncement_Click;
             // 
             // groupBox5
             // 
@@ -288,9 +295,9 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(LblNumara);
+            groupBox1.Controls.Add(LblNumber);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(LblAdSoyad);
+            groupBox1.Controls.Add(LblNameSurname);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new System.Drawing.Point(4, -6);
             groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -300,15 +307,15 @@
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             // 
-            // LblNumara
+            // LblNumber
             // 
-            LblNumara.AutoSize = true;
-            LblNumara.Location = new System.Drawing.Point(88, 61);
-            LblNumara.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblNumara.Name = "LblNumara";
-            LblNumara.Size = new System.Drawing.Size(12, 15);
-            LblNumara.TabIndex = 1;
-            LblNumara.Text = "-";
+            LblNumber.AutoSize = true;
+            LblNumber.Location = new System.Drawing.Point(88, 61);
+            LblNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblNumber.Name = "LblNumber";
+            LblNumber.Size = new System.Drawing.Size(12, 15);
+            LblNumber.TabIndex = 1;
+            LblNumber.Text = "-";
             // 
             // label3
             // 
@@ -320,15 +327,15 @@
             label3.TabIndex = 2;
             label3.Text = "Number:";
             // 
-            // LblAdSoyad
+            // LblNameSurname
             // 
-            LblAdSoyad.AutoSize = true;
-            LblAdSoyad.Location = new System.Drawing.Point(88, 26);
-            LblAdSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblAdSoyad.Name = "LblAdSoyad";
-            LblAdSoyad.Size = new System.Drawing.Size(12, 15);
-            LblAdSoyad.TabIndex = 1;
-            LblAdSoyad.Text = "-";
+            LblNameSurname.AutoSize = true;
+            LblNameSurname.Location = new System.Drawing.Point(88, 26);
+            LblNameSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblNameSurname.Name = "LblNameSurname";
+            LblNameSurname.Size = new System.Drawing.Size(12, 15);
+            LblNameSurname.TabIndex = 1;
+            LblNameSurname.Text = "-";
             // 
             // label1
             // 
@@ -342,16 +349,16 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(BtnFotografSec);
+            groupBox2.Controls.Add(BtnPictureSelect);
             groupBox2.Controls.Add(pictureBox1);
             groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(TxtSifre);
+            groupBox2.Controls.Add(TxtPassword);
             groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(TxtSoyad);
+            groupBox2.Controls.Add(TxtSurname);
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(TxtAd);
-            groupBox2.Controls.Add(MskNumara);
+            groupBox2.Controls.Add(TxtName);
+            groupBox2.Controls.Add(MskNumber);
             groupBox2.Controls.Add(label5);
             groupBox2.Location = new System.Drawing.Point(4, 101);
             groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -361,15 +368,16 @@
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             // 
-            // BtnFotografSec
+            // BtnPictureSelect
             // 
-            BtnFotografSec.Location = new System.Drawing.Point(99, 299);
-            BtnFotografSec.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnFotografSec.Name = "BtnFotografSec";
-            BtnFotografSec.Size = new System.Drawing.Size(141, 32);
-            BtnFotografSec.TabIndex = 2;
-            BtnFotografSec.Text = "Image Select";
-            BtnFotografSec.UseVisualStyleBackColor = true;
+            BtnPictureSelect.Location = new System.Drawing.Point(99, 299);
+            BtnPictureSelect.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnPictureSelect.Name = "BtnPictureSelect";
+            BtnPictureSelect.Size = new System.Drawing.Size(141, 32);
+            BtnPictureSelect.TabIndex = 2;
+            BtnPictureSelect.Text = "Picture Select";
+            BtnPictureSelect.UseVisualStyleBackColor = true;
+            BtnPictureSelect.Click += BtnPictureSelect_Click;
             // 
             // pictureBox1
             // 
@@ -401,13 +409,13 @@
             label8.TabIndex = 9;
             label8.Text = "Password:";
             // 
-            // TxtSifre
+            // TxtPassword
             // 
-            TxtSifre.Location = new System.Drawing.Point(83, 134);
-            TxtSifre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtSifre.Name = "TxtSifre";
-            TxtSifre.Size = new System.Drawing.Size(173, 23);
-            TxtSifre.TabIndex = 8;
+            TxtPassword.Location = new System.Drawing.Point(83, 134);
+            TxtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtPassword.Name = "TxtPassword";
+            TxtPassword.Size = new System.Drawing.Size(173, 23);
+            TxtPassword.TabIndex = 8;
             // 
             // label7
             // 
@@ -419,13 +427,13 @@
             label7.TabIndex = 7;
             label7.Text = "Surname:";
             // 
-            // TxtSoyad
+            // TxtSurname
             // 
-            TxtSoyad.Location = new System.Drawing.Point(83, 99);
-            TxtSoyad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtSoyad.Name = "TxtSoyad";
-            TxtSoyad.Size = new System.Drawing.Size(173, 23);
-            TxtSoyad.TabIndex = 6;
+            TxtSurname.Location = new System.Drawing.Point(83, 99);
+            TxtSurname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtSurname.Name = "TxtSurname";
+            TxtSurname.Size = new System.Drawing.Size(173, 23);
+            TxtSurname.TabIndex = 6;
             // 
             // label6
             // 
@@ -437,22 +445,22 @@
             label6.TabIndex = 5;
             label6.Text = "Name:";
             // 
-            // TxtAd
+            // TxtName
             // 
-            TxtAd.Location = new System.Drawing.Point(83, 65);
-            TxtAd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtAd.Name = "TxtAd";
-            TxtAd.Size = new System.Drawing.Size(173, 23);
-            TxtAd.TabIndex = 4;
+            TxtName.Location = new System.Drawing.Point(83, 65);
+            TxtName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtName.Name = "TxtName";
+            TxtName.Size = new System.Drawing.Size(173, 23);
+            TxtName.TabIndex = 4;
             // 
-            // MskNumara
+            // MskNumber
             // 
-            MskNumara.Location = new System.Drawing.Point(83, 30);
-            MskNumara.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            MskNumara.Mask = "0000";
-            MskNumara.Name = "MskNumara";
-            MskNumara.Size = new System.Drawing.Size(173, 23);
-            MskNumara.TabIndex = 3;
+            MskNumber.Location = new System.Drawing.Point(83, 30);
+            MskNumber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskNumber.Mask = "0000";
+            MskNumber.Name = "MskNumber";
+            MskNumber.Size = new System.Drawing.Size(173, 23);
+            MskNumber.TabIndex = 3;
             // 
             // label5
             // 
@@ -464,13 +472,13 @@
             label5.TabIndex = 2;
             label5.Text = "Number:";
             // 
-            // TxtProje
+            // TxtProject
             // 
-            TxtProje.Location = new System.Drawing.Point(87, 125);
-            TxtProje.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtProje.Name = "TxtProje";
-            TxtProje.Size = new System.Drawing.Size(68, 23);
-            TxtProje.TabIndex = 19;
+            TxtProject.Location = new System.Drawing.Point(87, 125);
+            TxtProject.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtProject.Name = "TxtProject";
+            TxtProject.Size = new System.Drawing.Size(68, 23);
+            TxtProject.TabIndex = 19;
             // 
             // label11
             // 
@@ -482,13 +490,13 @@
             label11.TabIndex = 18;
             label11.Text = "Exam 3:";
             // 
-            // TxtSınav3
+            // TxtExam3
             // 
-            TxtSınav3.Location = new System.Drawing.Point(87, 90);
-            TxtSınav3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtSınav3.Name = "TxtSınav3";
-            TxtSınav3.Size = new System.Drawing.Size(68, 23);
-            TxtSınav3.TabIndex = 17;
+            TxtExam3.Location = new System.Drawing.Point(87, 90);
+            TxtExam3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtExam3.Name = "TxtExam3";
+            TxtExam3.Size = new System.Drawing.Size(68, 23);
+            TxtExam3.TabIndex = 17;
             // 
             // label10
             // 
@@ -500,13 +508,13 @@
             label10.TabIndex = 16;
             label10.Text = "Exam 2:";
             // 
-            // TxtSınav2
+            // TxtExam2
             // 
-            TxtSınav2.Location = new System.Drawing.Point(87, 55);
-            TxtSınav2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtSınav2.Name = "TxtSınav2";
-            TxtSınav2.Size = new System.Drawing.Size(68, 23);
-            TxtSınav2.TabIndex = 15;
+            TxtExam2.Location = new System.Drawing.Point(87, 55);
+            TxtExam2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtExam2.Name = "TxtExam2";
+            TxtExam2.Size = new System.Drawing.Size(68, 23);
+            TxtExam2.TabIndex = 15;
             // 
             // label14
             // 
@@ -518,39 +526,40 @@
             label14.TabIndex = 14;
             label14.Text = "Exam 1:";
             // 
-            // TxtSınav1
+            // TxtExam1
             // 
-            TxtSınav1.Location = new System.Drawing.Point(87, 21);
-            TxtSınav1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtSınav1.Name = "TxtSınav1";
-            TxtSınav1.Size = new System.Drawing.Size(68, 23);
-            TxtSınav1.TabIndex = 13;
+            TxtExam1.Location = new System.Drawing.Point(87, 21);
+            TxtExam1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtExam1.Name = "TxtExam1";
+            TxtExam1.Size = new System.Drawing.Size(68, 23);
+            TxtExam1.TabIndex = 13;
             // 
-            // BtnHesapla
+            // BtnCalculate
             // 
-            BtnHesapla.Location = new System.Drawing.Point(19, 235);
-            BtnHesapla.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnHesapla.Name = "BtnHesapla";
-            BtnHesapla.Size = new System.Drawing.Size(149, 32);
-            BtnHesapla.TabIndex = 2;
-            BtnHesapla.Text = "Calculate";
-            BtnHesapla.UseVisualStyleBackColor = true;
+            BtnCalculate.Location = new System.Drawing.Point(19, 235);
+            BtnCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnCalculate.Name = "BtnCalculate";
+            BtnCalculate.Size = new System.Drawing.Size(149, 32);
+            BtnCalculate.TabIndex = 2;
+            BtnCalculate.Text = "Calculate";
+            BtnCalculate.UseVisualStyleBackColor = true;
+            BtnCalculate.Click += BtnCalculate_Click;
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(label15);
-            groupBox3.Controls.Add(TxtDurum);
+            groupBox3.Controls.Add(TxtStatus);
             groupBox3.Controls.Add(label13);
-            groupBox3.Controls.Add(TxtOrtalama);
+            groupBox3.Controls.Add(TxtAverage);
             groupBox3.Controls.Add(label12);
-            groupBox3.Controls.Add(TxtProje);
+            groupBox3.Controls.Add(TxtProject);
             groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(TxtSınav3);
+            groupBox3.Controls.Add(TxtExam3);
             groupBox3.Controls.Add(label10);
-            groupBox3.Controls.Add(TxtSınav2);
+            groupBox3.Controls.Add(TxtExam2);
             groupBox3.Controls.Add(label14);
-            groupBox3.Controls.Add(TxtSınav1);
-            groupBox3.Controls.Add(BtnHesapla);
+            groupBox3.Controls.Add(TxtExam1);
+            groupBox3.Controls.Add(BtnCalculate);
             groupBox3.Location = new System.Drawing.Point(288, -6);
             groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             groupBox3.Name = "groupBox3";
@@ -574,6 +583,7 @@
             Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Name = "FormTeacher";
             Text = "Teacher Panel";
+            Load += FormTeacher_Load;
             groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox6.ResumeLayout(false);
@@ -594,49 +604,49 @@
 
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TxtOrtalama;
-        private System.Windows.Forms.Button BtnDuyuruListesi;
+        private System.Windows.Forms.TextBox TxtAverage;
+        private System.Windows.Forms.Button BtnAnnouncementList;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button BtnListele;
-        private System.Windows.Forms.Button BtnGuncelle;
-        private System.Windows.Forms.Button BtnSil;
-        private System.Windows.Forms.Button BtnKaydet;
-        private System.Windows.Forms.TextBox TxtDurum;
+        private System.Windows.Forms.Button BtnList;
+        private System.Windows.Forms.Button BtnEdit;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.TextBox TxtStatus;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button BtnCikis;
-        private System.Windows.Forms.Button BtnMesajlar;
-        private System.Windows.Forms.Button BtnDuyuruOlustur;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnMessages;
+        private System.Windows.Forms.Button BtnCreateAnnouncement;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label LblNumara;
+        private System.Windows.Forms.Label LblNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblAdSoyad;
+        private System.Windows.Forms.Label LblNameSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button BtnFotografSec;
+        private System.Windows.Forms.Button BtnPictureSelect;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtSifre;
+        private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtSoyad;
+        private System.Windows.Forms.TextBox TxtSurname;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtAd;
-        private System.Windows.Forms.MaskedTextBox MskNumara;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.MaskedTextBox MskNumber;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtProje;
+        private System.Windows.Forms.TextBox TxtProject;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox TxtSınav3;
+        private System.Windows.Forms.TextBox TxtExam3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtSınav2;
+        private System.Windows.Forms.TextBox TxtExam2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TxtSınav1;
-        private System.Windows.Forms.Button BtnHesapla;
+        private System.Windows.Forms.TextBox TxtExam1;
+        private System.Windows.Forms.Button BtnCalculate;
         private System.Windows.Forms.GroupBox groupBox3;
     }
 }

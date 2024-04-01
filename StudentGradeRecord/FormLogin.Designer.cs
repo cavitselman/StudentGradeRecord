@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             groupBox1 = new System.Windows.Forms.GroupBox();
-            BtnOgretmenGiris = new System.Windows.Forms.Button();
-            TxtOgretmenSifre = new System.Windows.Forms.TextBox();
-            MskOgretmenNumara = new System.Windows.Forms.MaskedTextBox();
+            BtnTeacherLogin = new System.Windows.Forms.Button();
+            TxtTeacherPassword = new System.Windows.Forms.TextBox();
+            MskTeacherNumber = new System.Windows.Forms.MaskedTextBox();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
-            BtnOgrenciGiris = new System.Windows.Forms.Button();
-            TxtOGrenciSifre = new System.Windows.Forms.TextBox();
-            MskOgrenciNumara = new System.Windows.Forms.MaskedTextBox();
+            BtnStudentLogin = new System.Windows.Forms.Button();
+            TxtStudentPassword = new System.Windows.Forms.TextBox();
+            MskStudentNumber = new System.Windows.Forms.MaskedTextBox();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,9 +51,9 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(BtnOgretmenGiris);
-            groupBox1.Controls.Add(TxtOgretmenSifre);
-            groupBox1.Controls.Add(MskOgretmenNumara);
+            groupBox1.Controls.Add(BtnTeacherLogin);
+            groupBox1.Controls.Add(TxtTeacherPassword);
+            groupBox1.Controls.Add(MskTeacherNumber);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(pictureBox1);
@@ -66,34 +66,34 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Teacher";
             // 
-            // BtnOgretmenGiris
+            // BtnTeacherLogin
             // 
-            BtnOgretmenGiris.Location = new System.Drawing.Point(264, 107);
-            BtnOgretmenGiris.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnOgretmenGiris.Name = "BtnOgretmenGiris";
-            BtnOgretmenGiris.Size = new System.Drawing.Size(139, 37);
-            BtnOgretmenGiris.TabIndex = 5;
-            BtnOgretmenGiris.Text = "Login";
-            BtnOgretmenGiris.UseVisualStyleBackColor = true;
-            BtnOgretmenGiris.Click += BtnOgretmenGiris_Click;
+            BtnTeacherLogin.Location = new System.Drawing.Point(264, 107);
+            BtnTeacherLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnTeacherLogin.Name = "BtnTeacherLogin";
+            BtnTeacherLogin.Size = new System.Drawing.Size(139, 37);
+            BtnTeacherLogin.TabIndex = 5;
+            BtnTeacherLogin.Text = "Login";
+            BtnTeacherLogin.UseVisualStyleBackColor = true;
+            BtnTeacherLogin.Click += BtnTeacherLogin_Click;
             // 
-            // TxtOgretmenSifre
+            // TxtTeacherPassword
             // 
-            TxtOgretmenSifre.Location = new System.Drawing.Point(264, 73);
-            TxtOgretmenSifre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtOgretmenSifre.Name = "TxtOgretmenSifre";
-            TxtOgretmenSifre.Size = new System.Drawing.Size(138, 23);
-            TxtOgretmenSifre.TabIndex = 4;
-            TxtOgretmenSifre.UseSystemPasswordChar = true;
+            TxtTeacherPassword.Location = new System.Drawing.Point(264, 73);
+            TxtTeacherPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtTeacherPassword.Name = "TxtTeacherPassword";
+            TxtTeacherPassword.Size = new System.Drawing.Size(138, 23);
+            TxtTeacherPassword.TabIndex = 4;
+            TxtTeacherPassword.UseSystemPasswordChar = true;
             // 
-            // MskOgretmenNumara
+            // MskTeacherNumber
             // 
-            MskOgretmenNumara.Location = new System.Drawing.Point(264, 33);
-            MskOgretmenNumara.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            MskOgretmenNumara.Mask = "0000";
-            MskOgretmenNumara.Name = "MskOgretmenNumara";
-            MskOgretmenNumara.Size = new System.Drawing.Size(138, 23);
-            MskOgretmenNumara.TabIndex = 3;
+            MskTeacherNumber.Location = new System.Drawing.Point(264, 33);
+            MskTeacherNumber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskTeacherNumber.Mask = "0000";
+            MskTeacherNumber.Name = "MskTeacherNumber";
+            MskTeacherNumber.Size = new System.Drawing.Size(138, 23);
+            MskTeacherNumber.TabIndex = 3;
             // 
             // label2
             // 
@@ -128,9 +128,9 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(BtnOgrenciGiris);
-            groupBox2.Controls.Add(TxtOGrenciSifre);
-            groupBox2.Controls.Add(MskOgrenciNumara);
+            groupBox2.Controls.Add(BtnStudentLogin);
+            groupBox2.Controls.Add(TxtStudentPassword);
+            groupBox2.Controls.Add(MskStudentNumber);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(pictureBox2);
@@ -143,34 +143,34 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Student";
             // 
-            // BtnOgrenciGiris
+            // BtnStudentLogin
             // 
-            BtnOgrenciGiris.Location = new System.Drawing.Point(264, 107);
-            BtnOgrenciGiris.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnOgrenciGiris.Name = "BtnOgrenciGiris";
-            BtnOgrenciGiris.Size = new System.Drawing.Size(139, 37);
-            BtnOgrenciGiris.TabIndex = 5;
-            BtnOgrenciGiris.Text = "Login";
-            BtnOgrenciGiris.UseVisualStyleBackColor = true;
-            BtnOgrenciGiris.Click += BtnOgrenciGiris_Click;
+            BtnStudentLogin.Location = new System.Drawing.Point(264, 107);
+            BtnStudentLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnStudentLogin.Name = "BtnStudentLogin";
+            BtnStudentLogin.Size = new System.Drawing.Size(139, 37);
+            BtnStudentLogin.TabIndex = 5;
+            BtnStudentLogin.Text = "Login";
+            BtnStudentLogin.UseVisualStyleBackColor = true;
+            BtnStudentLogin.Click += BtnStudentLogin_Click;
             // 
-            // TxtOGrenciSifre
+            // TxtStudentPassword
             // 
-            TxtOGrenciSifre.Location = new System.Drawing.Point(264, 73);
-            TxtOGrenciSifre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            TxtOGrenciSifre.Name = "TxtOGrenciSifre";
-            TxtOGrenciSifre.Size = new System.Drawing.Size(138, 23);
-            TxtOGrenciSifre.TabIndex = 4;
-            TxtOGrenciSifre.UseSystemPasswordChar = true;
+            TxtStudentPassword.Location = new System.Drawing.Point(264, 73);
+            TxtStudentPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            TxtStudentPassword.Name = "TxtStudentPassword";
+            TxtStudentPassword.Size = new System.Drawing.Size(138, 23);
+            TxtStudentPassword.TabIndex = 4;
+            TxtStudentPassword.UseSystemPasswordChar = true;
             // 
-            // MskOgrenciNumara
+            // MskStudentNumber
             // 
-            MskOgrenciNumara.Location = new System.Drawing.Point(264, 33);
-            MskOgrenciNumara.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            MskOgrenciNumara.Mask = "0000";
-            MskOgrenciNumara.Name = "MskOgrenciNumara";
-            MskOgrenciNumara.Size = new System.Drawing.Size(138, 23);
-            MskOgrenciNumara.TabIndex = 3;
+            MskStudentNumber.Location = new System.Drawing.Point(264, 33);
+            MskStudentNumber.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            MskStudentNumber.Mask = "0000";
+            MskStudentNumber.Name = "MskStudentNumber";
+            MskStudentNumber.Size = new System.Drawing.Size(138, 23);
+            MskStudentNumber.TabIndex = 3;
             // 
             // label3
             // 
@@ -227,15 +227,15 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button BtnOgretmenGiris;
-        private System.Windows.Forms.TextBox TxtOgretmenSifre;
-        private System.Windows.Forms.MaskedTextBox MskOgretmenNumara;
+        private System.Windows.Forms.Button BtnTeacherLogin;
+        private System.Windows.Forms.TextBox TxtTeacherPassword;
+        private System.Windows.Forms.MaskedTextBox MskTeacherNumber;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button BtnOgrenciGiris;
-        private System.Windows.Forms.TextBox TxtOGrenciSifre;
-        private System.Windows.Forms.MaskedTextBox MskOgrenciNumara;
+        private System.Windows.Forms.Button BtnStudentLogin;
+        private System.Windows.Forms.TextBox TxtStudentPassword;
+        private System.Windows.Forms.MaskedTextBox MskStudentNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;

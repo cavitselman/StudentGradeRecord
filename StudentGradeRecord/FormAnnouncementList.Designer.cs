@@ -37,6 +37,7 @@
             ClientSize = new System.Drawing.Size(800, 450);
             Name = "FormAnnouncementList";
             Text = "Announcement List";
+            Load += FormAnnouncementList_Load;
             ResumeLayout(false);
         }
 

@@ -31,43 +31,40 @@ namespace StudentGradeRecord
         {
             List();
         }
-
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             SqlCommand comd = new SqlCommand("insert into TblAnnouncements (Description) values (@p1)", cnt.connect());
             comd.Parameters.AddWithValue("@p1", RchAnnouncement.Text);
             comd.ExecuteNonQuery();
-            MessageBox.Show("Duyuru Oluşturuldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Announcement Created", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cnt.connect().Close();
             List();
         }
 
         string id;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int select = dataGridView1.SelectedCells[0].RowIndex;
             id = dataGridView1.Rows[select].Cells[0].Value.ToString();
             RchAnnouncement.Text = dataGridView1.Rows[select].Cells[1].Value.ToString();
             this.Text = id;
         }
-
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             SqlCommand comd = new SqlCommand("Delete From TblAnnouncements where AnnouncementID=@p1", cnt.connect());
             comd.Parameters.AddWithValue("@p1", id);
             comd.ExecuteNonQuery();
-            MessageBox.Show("Duyuru Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            MessageBox.Show("Announcement Deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             cnt.connect().Close();
             List();
         }
-
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             SqlCommand comd = new SqlCommand("Update TblAnnouncements set Description=@p1 where AnnouncementID=@p2", cnt.connect());
             comd.Parameters.AddWithValue("@p1", RchAnnouncement.Text);
             comd.Parameters.AddWithValue("@p2", id);
             comd.ExecuteNonQuery();
-            MessageBox.Show("Duyuru Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Announcement Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             cnt.connect().Close();
             List();
         }

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            BtnCikis = new System.Windows.Forms.Button();
-            BtnHesapMakinesi = new System.Windows.Forms.Button();
-            BtnDuyurular = new System.Windows.Forms.Button();
-            BtnMesajlar = new System.Windows.Forms.Button();
+            BtnExit = new System.Windows.Forms.Button();
+            BtnCalculator = new System.Windows.Forms.Button();
+            BtnAnnouncements = new System.Windows.Forms.Button();
+            BtnMessages = new System.Windows.Forms.Button();
             groupBox2 = new System.Windows.Forms.GroupBox();
-            LblDurum = new System.Windows.Forms.Label();
-            LblOrtalama = new System.Windows.Forms.Label();
-            LblProje = new System.Windows.Forms.Label();
-            LblSınav3 = new System.Windows.Forms.Label();
-            LblSınav2 = new System.Windows.Forms.Label();
-            LblSınav1 = new System.Windows.Forms.Label();
+            LblStatus = new System.Windows.Forms.Label();
+            LblAverage = new System.Windows.Forms.Label();
+            LblProject = new System.Windows.Forms.Label();
+            LblExam3 = new System.Windows.Forms.Label();
+            LblExam2 = new System.Windows.Forms.Label();
+            LblExam1 = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
             label13 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             label10 = new System.Windows.Forms.Label();
             label14 = new System.Windows.Forms.Label();
             groupBox3 = new System.Windows.Forms.GroupBox();
-            LblNumara = new System.Windows.Forms.Label();
+            LblNumber = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
-            LblAdSoyad = new System.Windows.Forms.Label();
+            LblNameSurname = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             groupBox4 = new System.Windows.Forms.GroupBox();
             groupBox1 = new System.Windows.Forms.GroupBox();
@@ -72,52 +72,56 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // BtnCikis
+            // BtnExit
             // 
-            BtnCikis.Location = new System.Drawing.Point(7, 143);
-            BtnCikis.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnCikis.Name = "BtnCikis";
-            BtnCikis.Size = new System.Drawing.Size(240, 35);
-            BtnCikis.TabIndex = 3;
-            BtnCikis.Text = "Exit";
-            BtnCikis.UseVisualStyleBackColor = true;
+            BtnExit.Location = new System.Drawing.Point(7, 143);
+            BtnExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new System.Drawing.Size(240, 35);
+            BtnExit.TabIndex = 3;
+            BtnExit.Text = "Exit";
+            BtnExit.UseVisualStyleBackColor = true;
+            BtnExit.Click += BtnExit_Click;
             // 
-            // BtnHesapMakinesi
+            // BtnCalculator
             // 
-            BtnHesapMakinesi.Location = new System.Drawing.Point(7, 102);
-            BtnHesapMakinesi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnHesapMakinesi.Name = "BtnHesapMakinesi";
-            BtnHesapMakinesi.Size = new System.Drawing.Size(240, 35);
-            BtnHesapMakinesi.TabIndex = 2;
-            BtnHesapMakinesi.Text = "Hesap Makinesi";
-            BtnHesapMakinesi.UseVisualStyleBackColor = true;
+            BtnCalculator.Location = new System.Drawing.Point(7, 102);
+            BtnCalculator.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnCalculator.Name = "BtnCalculator";
+            BtnCalculator.Size = new System.Drawing.Size(240, 35);
+            BtnCalculator.TabIndex = 2;
+            BtnCalculator.Text = "Calculator";
+            BtnCalculator.UseVisualStyleBackColor = true;
+            BtnCalculator.Click += BtnCalculator_Click;
             // 
-            // BtnDuyurular
+            // BtnAnnouncements
             // 
-            BtnDuyurular.Location = new System.Drawing.Point(7, 60);
-            BtnDuyurular.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnDuyurular.Name = "BtnDuyurular";
-            BtnDuyurular.Size = new System.Drawing.Size(240, 35);
-            BtnDuyurular.TabIndex = 1;
-            BtnDuyurular.Text = "Announcements";
-            BtnDuyurular.UseVisualStyleBackColor = true;
+            BtnAnnouncements.Location = new System.Drawing.Point(7, 60);
+            BtnAnnouncements.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnAnnouncements.Name = "BtnAnnouncements";
+            BtnAnnouncements.Size = new System.Drawing.Size(240, 35);
+            BtnAnnouncements.TabIndex = 1;
+            BtnAnnouncements.Text = "Announcements";
+            BtnAnnouncements.UseVisualStyleBackColor = true;
+            BtnAnnouncements.Click += BtnAnnouncements_Click;
             // 
-            // BtnMesajlar
+            // BtnMessages
             // 
-            BtnMesajlar.Location = new System.Drawing.Point(7, 18);
-            BtnMesajlar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            BtnMesajlar.Name = "BtnMesajlar";
-            BtnMesajlar.Size = new System.Drawing.Size(240, 35);
-            BtnMesajlar.TabIndex = 0;
-            BtnMesajlar.Text = "Messages";
-            BtnMesajlar.UseVisualStyleBackColor = true;
+            BtnMessages.Location = new System.Drawing.Point(7, 18);
+            BtnMessages.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            BtnMessages.Name = "BtnMessages";
+            BtnMessages.Size = new System.Drawing.Size(240, 35);
+            BtnMessages.TabIndex = 0;
+            BtnMessages.Text = "Messages";
+            BtnMessages.UseVisualStyleBackColor = true;
+            BtnMessages.Click += BtnMessages_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(BtnCikis);
-            groupBox2.Controls.Add(BtnHesapMakinesi);
-            groupBox2.Controls.Add(BtnDuyurular);
-            groupBox2.Controls.Add(BtnMesajlar);
+            groupBox2.Controls.Add(BtnExit);
+            groupBox2.Controls.Add(BtnCalculator);
+            groupBox2.Controls.Add(BtnAnnouncements);
+            groupBox2.Controls.Add(BtnMessages);
             groupBox2.Location = new System.Drawing.Point(328, 7);
             groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
@@ -126,71 +130,71 @@
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             // 
-            // LblDurum
+            // LblStatus
             // 
-            LblDurum.AutoSize = true;
-            LblDurum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblDurum.Location = new System.Drawing.Point(100, 195);
-            LblDurum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblDurum.Name = "LblDurum";
-            LblDurum.Size = new System.Drawing.Size(14, 18);
-            LblDurum.TabIndex = 30;
-            LblDurum.Text = "-";
+            LblStatus.AutoSize = true;
+            LblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblStatus.Location = new System.Drawing.Point(100, 195);
+            LblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblStatus.Name = "LblStatus";
+            LblStatus.Size = new System.Drawing.Size(14, 18);
+            LblStatus.TabIndex = 30;
+            LblStatus.Text = "-";
             // 
-            // LblOrtalama
+            // LblAverage
             // 
-            LblOrtalama.AutoSize = true;
-            LblOrtalama.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblOrtalama.Location = new System.Drawing.Point(100, 161);
-            LblOrtalama.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblOrtalama.Name = "LblOrtalama";
-            LblOrtalama.Size = new System.Drawing.Size(14, 18);
-            LblOrtalama.TabIndex = 29;
-            LblOrtalama.Text = "-";
+            LblAverage.AutoSize = true;
+            LblAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblAverage.Location = new System.Drawing.Point(100, 161);
+            LblAverage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblAverage.Name = "LblAverage";
+            LblAverage.Size = new System.Drawing.Size(14, 18);
+            LblAverage.TabIndex = 29;
+            LblAverage.Text = "-";
             // 
-            // LblProje
+            // LblProject
             // 
-            LblProje.AutoSize = true;
-            LblProje.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblProje.Location = new System.Drawing.Point(100, 126);
-            LblProje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblProje.Name = "LblProje";
-            LblProje.Size = new System.Drawing.Size(14, 18);
-            LblProje.TabIndex = 28;
-            LblProje.Text = "-";
+            LblProject.AutoSize = true;
+            LblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblProject.Location = new System.Drawing.Point(100, 126);
+            LblProject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblProject.Name = "LblProject";
+            LblProject.Size = new System.Drawing.Size(14, 18);
+            LblProject.TabIndex = 28;
+            LblProject.Text = "-";
             // 
-            // LblSınav3
+            // LblExam3
             // 
-            LblSınav3.AutoSize = true;
-            LblSınav3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblSınav3.Location = new System.Drawing.Point(100, 91);
-            LblSınav3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblSınav3.Name = "LblSınav3";
-            LblSınav3.Size = new System.Drawing.Size(14, 18);
-            LblSınav3.TabIndex = 27;
-            LblSınav3.Text = "-";
+            LblExam3.AutoSize = true;
+            LblExam3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblExam3.Location = new System.Drawing.Point(100, 91);
+            LblExam3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblExam3.Name = "LblExam3";
+            LblExam3.Size = new System.Drawing.Size(14, 18);
+            LblExam3.TabIndex = 27;
+            LblExam3.Text = "-";
             // 
-            // LblSınav2
+            // LblExam2
             // 
-            LblSınav2.AutoSize = true;
-            LblSınav2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblSınav2.Location = new System.Drawing.Point(100, 57);
-            LblSınav2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblSınav2.Name = "LblSınav2";
-            LblSınav2.Size = new System.Drawing.Size(14, 18);
-            LblSınav2.TabIndex = 26;
-            LblSınav2.Text = "-";
+            LblExam2.AutoSize = true;
+            LblExam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblExam2.Location = new System.Drawing.Point(100, 57);
+            LblExam2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblExam2.Name = "LblExam2";
+            LblExam2.Size = new System.Drawing.Size(14, 18);
+            LblExam2.TabIndex = 26;
+            LblExam2.Text = "-";
             // 
-            // LblSınav1
+            // LblExam1
             // 
-            LblSınav1.AutoSize = true;
-            LblSınav1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
-            LblSınav1.Location = new System.Drawing.Point(100, 21);
-            LblSınav1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblSınav1.Name = "LblSınav1";
-            LblSınav1.Size = new System.Drawing.Size(14, 18);
-            LblSınav1.TabIndex = 25;
-            LblSınav1.Text = "-";
+            LblExam1.AutoSize = true;
+            LblExam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 162);
+            LblExam1.Location = new System.Drawing.Point(100, 21);
+            LblExam1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblExam1.Name = "LblExam1";
+            LblExam1.Size = new System.Drawing.Size(14, 18);
+            LblExam1.TabIndex = 25;
+            LblExam1.Text = "-";
             // 
             // label15
             // 
@@ -254,12 +258,12 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(LblDurum);
-            groupBox3.Controls.Add(LblOrtalama);
-            groupBox3.Controls.Add(LblProje);
-            groupBox3.Controls.Add(LblSınav3);
-            groupBox3.Controls.Add(LblSınav2);
-            groupBox3.Controls.Add(LblSınav1);
+            groupBox3.Controls.Add(LblStatus);
+            groupBox3.Controls.Add(LblAverage);
+            groupBox3.Controls.Add(LblProject);
+            groupBox3.Controls.Add(LblExam3);
+            groupBox3.Controls.Add(LblExam2);
+            groupBox3.Controls.Add(LblExam1);
             groupBox3.Controls.Add(label15);
             groupBox3.Controls.Add(label13);
             groupBox3.Controls.Add(label12);
@@ -274,15 +278,15 @@
             groupBox3.TabIndex = 7;
             groupBox3.TabStop = false;
             // 
-            // LblNumara
+            // LblNumber
             // 
-            LblNumara.AutoSize = true;
-            LblNumara.Location = new System.Drawing.Point(99, 60);
-            LblNumara.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblNumara.Name = "LblNumara";
-            LblNumara.Size = new System.Drawing.Size(12, 15);
-            LblNumara.TabIndex = 1;
-            LblNumara.Text = "-";
+            LblNumber.AutoSize = true;
+            LblNumber.Location = new System.Drawing.Point(99, 60);
+            LblNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblNumber.Name = "LblNumber";
+            LblNumber.Size = new System.Drawing.Size(12, 15);
+            LblNumber.TabIndex = 1;
+            LblNumber.Text = "-";
             // 
             // label3
             // 
@@ -294,15 +298,15 @@
             label3.TabIndex = 2;
             label3.Text = "Number:";
             // 
-            // LblAdSoyad
+            // LblNameSurname
             // 
-            LblAdSoyad.AutoSize = true;
-            LblAdSoyad.Location = new System.Drawing.Point(99, 25);
-            LblAdSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            LblAdSoyad.Name = "LblAdSoyad";
-            LblAdSoyad.Size = new System.Drawing.Size(12, 15);
-            LblAdSoyad.TabIndex = 1;
-            LblAdSoyad.Text = "-";
+            LblNameSurname.AutoSize = true;
+            LblNameSurname.Location = new System.Drawing.Point(99, 25);
+            LblNameSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            LblNameSurname.Name = "LblNameSurname";
+            LblNameSurname.Size = new System.Drawing.Size(12, 15);
+            LblNameSurname.TabIndex = 1;
+            LblNameSurname.Text = "-";
             // 
             // label1
             // 
@@ -327,9 +331,9 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(LblNumara);
+            groupBox1.Controls.Add(LblNumber);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(LblAdSoyad);
+            groupBox1.Controls.Add(LblNameSurname);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new System.Drawing.Point(7, 7);
             groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -351,6 +355,7 @@
             Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             Name = "FormStudent";
             Text = "Student Panel";
+            Load += FormStudent_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
@@ -364,17 +369,17 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button BtnCikis;
-        private System.Windows.Forms.Button BtnHesapMakinesi;
-        private System.Windows.Forms.Button BtnDuyurular;
-        private System.Windows.Forms.Button BtnMesajlar;
+        private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Button BtnCalculator;
+        private System.Windows.Forms.Button BtnAnnouncements;
+        private System.Windows.Forms.Button BtnMessages;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label LblDurum;
-        private System.Windows.Forms.Label LblOrtalama;
-        private System.Windows.Forms.Label LblProje;
-        private System.Windows.Forms.Label LblSınav3;
-        private System.Windows.Forms.Label LblSınav2;
-        private System.Windows.Forms.Label LblSınav1;
+        private System.Windows.Forms.Label LblStatus;
+        private System.Windows.Forms.Label LblAverage;
+        private System.Windows.Forms.Label LblProject;
+        private System.Windows.Forms.Label LblExam3;
+        private System.Windows.Forms.Label LblExam2;
+        private System.Windows.Forms.Label LblExam1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -382,9 +387,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label LblNumara;
+        private System.Windows.Forms.Label LblNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblAdSoyad;
+        private System.Windows.Forms.Label LblNameSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox1;

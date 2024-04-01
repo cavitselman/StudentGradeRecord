@@ -20,72 +20,68 @@ namespace StudentGradeRecord
         }
 
         SqlConnect cnt = new SqlConnect();
-        public string numara;
-        private void FrmOgrenci_Load(object sender, EventArgs e)
+        public string number;
+        private void FormStudent_Load(object sender, EventArgs e)
         {
-            LblNumara.Text = numara;
+            LblNumber.Text = number;
 
-            //Numaryaa göre isim bilgisi getirme
-            SqlCommand komut = new SqlCommand("Select * From TblStudents where Number=@p1", cnt.connect());
-            komut.Parameters.AddWithValue("@p1", numara);
-            SqlDataReader dr = komut.ExecuteReader();
+            //Bringing name information by number
+            SqlCommand comd = new SqlCommand("Select * From TblStudents where Number=@p1", cnt.connect());
+            comd.Parameters.AddWithValue("@p1", number);
+            SqlDataReader dr = comd.ExecuteReader();
             while (dr.Read())
             {
-                LblAdSoyad.Text = dr[1] + " " + dr[2];
-                pictureBox1.ImageLocation = dr[5].ToString();
+                LblNameSurname.Text = dr[2] + " " + dr[3];
+                //pictureBox1.ImageLocation = dr[5].ToString();
             }
             cnt.connect().Close();
 
-            //Not Listesi
-            SqlCommand komut2 = new SqlCommand("Select * From TblNotes where StudentID=(Select ID From TblStudents Where Number=@p1)", cnt.connect());
-            komut2.Parameters.AddWithValue("@p1", LblNumara.Text);
-            SqlDataReader dr2 = komut2.ExecuteReader();
-            while (dr2.Read())
-            {
-                LblSınav1.Text = dr2[1].ToString();
-                LblSınav2.Text = dr2[2].ToString();
-                LblSınav3.Text = dr2[3].ToString();
-                LblProje.Text = dr2[4].ToString();
-                LblOrtalama.Text = dr2[5].ToString();
-            }
-            cnt.connect().Close();
+            //Note List
+            //SqlCommand comd2 = new SqlCommand("Select * From TblNotes where StudentID=(Select ID From TblStudents Where Number=@p1)", cnt.connect());
+            //comd2.Parameters.AddWithValue("@p1", LblNumber.Text);
+            //SqlDataReader dr2 = comd2.ExecuteReader();
+            //while (dr2.Read())
+            //{
+            //    LblExam1.Text = dr2[2].ToString();
+            //    LblExam2.Text = dr2[3].ToString();
+            //    LblExam3.Text = dr2[4].ToString();
+            //    LblProject.Text = dr2[5].ToString();
+            //    LblAverage.Text = dr2[6].ToString();
+            //}
+            //cnt.connect().Close();
 
-            if (Convert.ToDouble(LblOrtalama.Text) >= 50)
-            {
-                LblDurum.Text = "Geçti";
-            }
-            else
-            {
-                LblDurum.Text = "Kaldı";
-            }
+            //if (Convert.ToDouble(LblAverage.Text) >= 50)
+            //{
+            //    LblStatus.Text = "Passed";
+            //}
+            //else
+            //{
+            //    LblStatus.Text = "Stayed";
+            //}
         }
 
-        //öğrenci formu
-        private void BtnMesajlar_Click(object sender, EventArgs e)
+        //Student Form
+        private void BtnMessages_Click(object sender, EventArgs e)
         {
             FormMessages frm = new FormMessages();
-            frm.numara = LblNumara.Text;
+            frm.number = LblNumber.Text;
             frm.Show();
         }
-
-        private void BtnDuyurular_Click(object sender, EventArgs e)
+        private void BtnAnnouncements_Click(object sender, EventArgs e)
         {
             FormAnnouncementList frm = new FormAnnouncementList();
             frm.Show();
         }
-
-        private void BtnHesapMakinesi_Click(object sender, EventArgs e)
+        private void BtnCalculator_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Calc.Exe");
         }
-
-        private void BtnCikis_Click(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Gerçekten Kaptmak İstiyor Musunuz?", "Uyarı!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("Are you sure you want to quit?", "Warning!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 Application.Exit();
-
             }
         }
     }

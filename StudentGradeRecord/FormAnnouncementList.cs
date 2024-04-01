@@ -19,7 +19,6 @@ namespace StudentGradeRecord
             InitializeComponent();
         }
         SqlConnect cnt = new SqlConnect();
-
         private void FormAnnouncementList_Load(object sender, EventArgs e)
         {
             ListBox lst = new ListBox();
